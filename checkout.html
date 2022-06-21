@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Оформление заказа</title>
+<link rel="stylesheet" href="./css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/jquery.store.js"></script>
+</head>
+
+<!--body id="checkout-page"-->
+<body>
+
+    <!----
+    <header id="masthead">
+        <h1></h1>
+    </header>
+    ---->
+    
+    <!--
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="topnav">
+            <a style="color:black;" class="active" href="#home">Home</a>
+          </div> 
+            <div class="collapse navbar-collapse" id="navbarNav">
+            
+              <ul class="navbar-nav ml-auto">
+               
+               <li class="nav-item">
+                  <a style="color:black;" class="nav-link" href="#featured-categories">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color:black;" class="nav-link" href="./cart.html">Cart</a>
+              
+                </li>
+                
+                
+                <li class="nav-item">
+                  <a style="color:black;" class="nav-link" href="#about">About Us</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a style="color:black;" class="nav-link" href="#services">Our Services</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a style="color:black;" class="nav-link" href="#team" tabindex="-1" aria-disabled="true">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color:black;" class="nav-link" href="#contact">Contact</a>
+                </li>
+                
+                
+              </ul>
+            </div>
+          </nav>
+        -->
+
+
+
+
+
+
+    <div class="wrapper">
+
+        <div class="content">
+
+            <div id="site">
+
+                <div id="content">
+                    <h1>Оформление заказа</h1>
+                        <table id="checkout-cart" class="shopping-cart">
+                          <thead>
+                            <tr>
+                                <th scope="col">Наименование товара</th>
+                                <th scope="col">Количество</th>
+                                <th scope="col">Цена</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          
+                          </tbody>
+                        </table>
+                     <div id="pricing">
+                        
+                        <p id="shipping">
+                            <strong>Доставка</strong>: <span id="sshipping"></span>
+                        </p>
+                        
+                        <p id="sub-total">
+                            <strong>ИТОГО</strong>: <span id="stotal"></span>
+                        </p>
+                     </div>
+                     
+
+                     <form action="order.html" method="post" id="checkout-order-form">
+                         <h2>Информация о получателе</h2>
+                         
+                         <fieldset id="fieldset-billing">
+                             <legend>Расчётный адрес</legend>
+                             <div>
+                                 <label for="name">Имя</label>
+                                 <input type="text" name="name" id="name" data-type="string" data-message="Это поле не может быть пустым" />
+                             </div>
+                             <div>
+                                 <label for="email">Электронная почта</label>
+                                 <input type="text" name="email" id="email" data-type="expression" data-message="Недопустимый адрес электронной почты" />
+                             </div>
+                             <div>
+                                 <label for="city">Город</label>
+                                 <input type="text" name="city" id="city" data-type="string" data-message="Это поле не может быть пустым" />
+                             </div>
+                             <div>
+                                 <label for="address">Адрес</label>
+                                 <input type="text" name="address" id="address" data-type="string" data-message="Это поле не может быть пустым" />
+                             </div>
+                             <div>
+                                 <label for="zip">Почтовый индекс</label>
+                                 <input type="text" name="zip" id="zip" data-type="string" data-message="Это поле не может быть пустым" />
+                             </div>
+                             <div>
+                                 <label for="country">Страна</label>
+                                 <select name="country" id="country" data-type="string" data-message="Это поле не может быть пустым">
+                                     <option value="">выбрать</option>
+                                     <option value="Ru">Россия</option>
+                                     <option value="Bl">Белоруссия</option>
+                                     <option value="Kz">Казахстан</option>
+                                 </select>
+                             </div>
+                         </fieldset>
+                         
+                         <div id="shipping-same">Совпадает с расчётным адресом <input type="checkbox" id="same-as-billing" value=""/></div>
+                         
+                         <fieldset id="fieldset-shipping">
+                             
+                             <legend>Адрес доставки</legend>
+                             
+                             <div>
+                                 <label for="sname">Имя</label>
+                                 <input type="text" name="sname" id="sname" data-type="string" data-message="Это поле не может быть пустым" />
+                             </div>
+                             <div>
+                                 <label for="semail">Электронная почта</label>
+                                 <input type="text" name="semail" id="semail" data-type="expression" data-message="Недопустимый адрес электронной почты" />
+                             </div>
+                             <div>
+                                 <label for="scity">Город</label>
+                                 <input type="text" name="scity" id="scity" data-type="string" data-message="Это поле не может быть пустым" />
+                             </div>
+                             <div>
+                                 <label for="saddress">Адрес</label>
+                                 <input type="text" name="saddress" id="saddress" data-type="string" data-message="Это поле не может быть пустым" />
+                             </div>
+                             <div>
+                                 <label for="szip">Почтовый индекс</label>
+                                 <input type="text" name="szip" id="szip" data-type="string" data-message="Это поле не может быть пустым" />
+                             </div>
+                             <div>
+                                 <label for="scountry">Страна</label>
+                                 <select name="scountry" id="scountry" data-type="string" data-message="Это поле не может быть пустым">
+                                     <option value="">выбрать</option>
+                                     <option value="Ru">Россия</option>
+                                     <option value="Bl">Белоруссия</option>
+                                     <option value="Kz">Казахстан</option>
+                                 </select>
+                             </div>
+                         </fieldset>
+                         
+                         <p><input type="submit" id="submit-order" value="ОТПРАВИТЬ" class="btn" /></p>
+
+                     </form>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="footer">
+
+            <footer id="site-info">
+                &copy;2022 Дмитрий Миронов. Все права защищены.
+            </footer>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+</div></section>
+
+</body>
+</html>

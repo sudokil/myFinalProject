@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Корзина</title>
+<link rel="stylesheet" href="./css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/jquery.store.js"></script>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <div class="content">
+
+            <div id="site">
+                <!--
+                <header id="masthead">
+                    <h1></h1>
+                </header>
+                -->
+                <div id="content">
+                    <h1>Корзина покупок</h1>
+                    <form id="shopping-cart" action="cart.html" method="post">
+                        <table class="shopping-cart">
+                          <thead>
+                            <tr>
+                                <th scope="col">Наименование товара</th>
+                                <th scope="col">Количество</th>
+                                <th scope="col" colspan="2">Цена</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          
+                          </tbody>
+                        </table>
+                        <p id="sub-total">
+                            <strong>ИТОГО</strong>: <span id="stotal"></span>
+                        </p>
+                        <ul id="shopping-cart-actions">
+                            <li>
+                                <input type="submit" name="update" id="update-cart" class="btn" value="Пересчитать" />
+                            </li>
+                            <li>
+                                <input type="submit" name="delete" id="empty-cart" class="btn" value="Очистить корзину" />
+                            </li>
+                            <li>
+                                <a href="index.html" class="btn">Продолжить покупки</a>
+                            </li>
+                            <li>
+                                <a href="checkout.html" class="btn">Перейти к оформлению заказа</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                
+                
+            
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="footer">
+
+            <footer id="site-info">
+                &copy;2022 Дмитрий Миронов. Все права защищены.
+            </footer>
+
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

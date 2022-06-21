@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Заказ оформлен</title>
+<link rel="stylesheet" href="./css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/jquery.store.js"></script>
+</head>
+
+<!--body id="checkout-page"-->
+<body>
+
+
+
+    <div class="wrapper">
+
+        <div class="content">
+
+            <div id="site">
+
+                <!--
+                <header id="masthead">
+                    <h1></h1>
+                </header>
+                -->
+                <div id="content">
+                    <h1>Ваш заказ</h1>
+                        <table id="checkout-cart" class="shopping-cart">
+                          <thead>
+                            <tr>
+                                <th scope="col">Наименование товара</th>
+                                <th scope="col">Количество</th>
+                                <th scope="col">Цена</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          
+                          </tbody>
+                        </table>
+                     <div id="pricing">
+                        
+                        <p id="shipping">
+                            <strong>Доставка</strong>: <span id="sshipping"></span>
+                        </p>
+                        
+                        <p id="sub-total">
+                            <strong>Итого</strong>: <span id="stotal"></span>
+                        </p>
+                     </div>
+                     
+                     <div id="user-details">
+                         <h2>Ваши данные</h2>
+                         <div id="user-details-content"></div>
+                     </div>
+                     
+                     
+                     
+                     
+            <form id="paypal-form" action="" method="post">
+                <input type="hidden" name="cmd" value="_cart" />
+                <input type="hidden" name="upload" value="1" />
+                <input type="hidden" name="business" value="" />
+                    
+                <input type="hidden" name="currency_code" value="" />
+                <input type="submit" id="paypal-btn" class="btn" value="Оплата PayPal" />
+            </form>
+                     
+                     
+                </div>
+                
+                
+            
+            </div>
+        </div>
+    
+        <div class="footer">
+            <footer id="site-info">
+                &copy;2022 Дмитрий Миронов. Все права защищены.
+            </footer>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
